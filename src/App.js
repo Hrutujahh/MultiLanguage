@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import GoogleTranslate from "./components/GoogleTranslate";
+import ErrorBoundary from "./components/ErrorBoundary";
+import "./App.css";
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ErrorBoundary>
+        <GoogleTranslate />
+      </ErrorBoundary>
+      <h1>Welcome to my Website</h1>
+      <h1>Simple Way to Create Multilingual Website</h1>
+      <h3>
+        Google Translator Script Use to Convert All Over Language Simple Steps
+      </h3>
     </div>
   );
-}
+};
 
 export default App;
